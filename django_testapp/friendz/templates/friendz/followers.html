@@ -1,0 +1,15 @@
+{% extends 'base.html' %} 
+{% block content %} 
+  <h1>Followers of {{ leusername }}</h1>
+  {% if peoplez_list %} 
+     <ul>
+       {% for peoplez in peoplez_list %} 
+       <li>
+         {{ peoplez.fromUser }}
+       </li> 
+       {% endfor %} 
+    </ul> 
+  {% else %} 
+  	No one is following {{ leusername }}
+  {% endif %} 
+{% endblock %}

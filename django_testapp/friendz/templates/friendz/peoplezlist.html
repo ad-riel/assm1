@@ -1,0 +1,15 @@
+{% extends 'base.html' %} 
+{% block content %} 
+  {% if peoplez_list %} 
+  <h1>People using Friendz</h1>
+     <ul>
+       {% for peoplez in peoplez_list %} 
+       <li>
+         {{ peoplez.username }}
+       </li> 
+       {% endfor %} 
+    </ul> 
+  {% else %} 
+  	There are no users
+  {% endif %}
+{% endblock %}
